@@ -1,11 +1,11 @@
-package function接口;
+package functioninterface;
 
 import java.util.function.Function;
 
 /**
  * @author wuyuan
  * @version 1.0
- * @className: composeAndandThen
+ * @className: ComposeAndandThen
  * @description 描述:
  *
  *    compose是function接口的一个方法，他接收一个function类型的参数，
@@ -21,7 +21,7 @@ import java.util.function.Function;
  *
  * @date 2019/5/24
  */
-public class composeAndandThen {
+public class ComposeAndandThen {
 
     public static void main(String[] args) {
         System.out.println(composeTest(3, i -> i + 1, j -> j * 2));

@@ -1,15 +1,13 @@
-package lambda表达式;
+package lambda;
 
 /**
- * Lambda表达式其实的是一个实现了有且只有一个方法的接口的类的对象。
- * 这个有且只有一个自己的方法的接口叫做函数式接口。
- *
  * @author wuyuan
  * @version 1.0
- * @description 描述:
+ * @description 描述: Lambda表达式其实的是一个实现了有且只有一个方法的接口的类的对象。
+ *                   这个有且只有一个自己的方法的接口叫做函数式接口。
  * @date 2019/4/5 20:33
  */
-public class Lambda {
+public class LambdaTest {
     public static void qwe(asd asd, int i) {
         asd.aa(i);
     }
@@ -27,7 +25,7 @@ public class Lambda {
         }, as);
 
         //如果lambda表达式的方法调用的是一个已经被实现的方法，那么可以直接用方法引用来代替lambda表达式
-        qwe(Lambda::zxc, as);
+        qwe(LambdaTest::zxc, as);
 
         asd asdd = (iii) -> {
             System.out.println("a");
