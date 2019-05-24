@@ -14,7 +14,7 @@ import java.util.function.Consumer;
  * @description 描述:
  * @date 2019/4/6 19:32
  */
-public class Consumer_ {
+public class ConsumerTest {
     public static void main(String[] args) {
 
         //遍历list

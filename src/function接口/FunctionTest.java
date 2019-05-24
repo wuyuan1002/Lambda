@@ -10,7 +10,7 @@ import java.util.function.Function;
  * @description 描述:
  * @date 2019/4/6 19:47
  */
-public class Function_ {
+public class FunctionTest {
     public static void main(String[] args) {
         Integer i = 2;
         Integer result = functionTest(i, ii -> ++ii * 6);
