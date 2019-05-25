@@ -1,4 +1,4 @@
-package consumer;
+package lambda.consumer;
 
 import java.util.ArrayList;
 import java.util.HashMap;
