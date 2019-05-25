@@ -31,19 +31,23 @@ public class OptionalTest {
         boolean b1 = op3.isPresent();
         System.out.println(b1);
 
+
         System.out.println("------------get-------------");
         //获取optional里的值，如果是null则报空指针异常
         User u3 = op2.get();
         System.out.println(u3.getName());
 
+
         System.out.println("-----------ifPresent--------------");
         //如果optional里的值不为null，则执行传入的Consumer，consumer的参数是optional里面的值，如果为null，则什么都不执行
         op2.ifPresent(u -> System.out.println("optional里的值不是null，是" + u));
+
 
         System.out.println("------------orElse-------------");
         //如果optional里的值不是null，则返回里面的值，如果是null，则返回传入的参数
         String st = op3.orElse("如果值是null，则返回传入的参数");
         System.out.println(st);
+
 
         System.out.println("------------map-------------");
         //接受一个function，返回值是一个optional，返回值里面的值是把当前optional对象里面的值传入参数function执行后的返回值
@@ -72,8 +76,7 @@ public class OptionalTest {
 class User {
     private String name;
 
-    public User() {
-    }
+    public User() {}
 
     public User(String name) {
         this.name = name;
