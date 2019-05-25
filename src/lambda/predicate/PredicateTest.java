@@ -7,7 +7,7 @@ import java.util.function.Predicate;
  * @version 1.0
  * @className: PredicateTest
  * @description 描述: 用来做判断用，接受一个参数，返回值是boolean类型。
- * 当输入值满足条件时返回true，不满足时返回false。
+ *                   当输入值满足条件时返回true，不满足时返回false。
  * @date 2019/5/24
  */
 public class PredicateTest {
