@@ -50,7 +50,8 @@ public class Demo5 {
                 .skip(3)
                 .collect(StringBuilder::new,
                         (sb, i) -> sb.append(i.toString().concat("-")),
-                        StringBuilder::append).toString();
+                        StringBuilder::append)
+                .toString();
         System.out.println(s);
 
 
