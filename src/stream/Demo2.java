@@ -37,7 +37,7 @@ public class Demo2 {
 
 
         /**
-         * 把数组转换成流，再把流转换成List   ---   (与可以用同样的方法转成 map，set )
+         * 把数组转换成流，再把流转换成List   ---   (同样地 也可以把流转成 map，set )
          */
         /*.1 -- 默认转换成ArrayList*/
         List<String> list1 = Stream.of(strings).collect(Collectors.toList());
