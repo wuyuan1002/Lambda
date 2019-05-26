@@ -5,6 +5,7 @@ import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.UUID;
 import java.util.stream.Stream;
 
 /**
@@ -26,7 +27,6 @@ import java.util.stream.Stream;
  *      3.流的中间操作都是惰性的，终止操作是立即执行的。只有遇到终止操作时中间操作才会执行，如果没有终止操作的话中间操作是不会执行的
  *      4.流的中间操作增多并不会降低效率
  *
- *
  * @date 2019/5/25
  */
 public class StreamTest {
@@ -37,10 +37,10 @@ public class StreamTest {
 
         /**一.Stream.of()静态方法，传入一个(list,map,数组)或多个数据*/
         /*.1*/
-        Stream.of("hello","world","hello world");
+        Stream.of("hello", "world", "hello world");
 
         /*.2*/
-        int[] aa = new int[]{1,2,3};
+        int[] aa = new int[]{1, 2, 3};
         Stream.of(aa);
 
         /*.3*/
@@ -48,26 +48,26 @@ public class StreamTest {
         list.add("asc");
         list.add("svd");
         list.add("jdb");
-        list.stream();
+        Stream.of(list);
 
         /*.4*/
-        Map<String,String> as = new HashMap<>();
-        as.put("ws","as");
-        as.put("as","s");
+        Map<String, String> as = new HashMap<>();
+        as.put("ws", "as");
+        as.put("as", "s");
         Stream.of(as);
 
 
-        /**一.Arrays.stream()方法，传入一个数组*/
+        /**二.Arrays.stream()方法，传入一个数组*/
         /*.1*/
-        int[] bb = new int[]{1,2,3};
+        int[] bb = new int[]{1, 2, 3};
         Arrays.stream(bb);
 
         /*.2*/
-        Integer[] cc = new Integer[]{1,2};
+        Integer[] cc = new Integer[]{1, 2};
         Arrays.stream(cc);
 
 
-        /**一.Collection接口的stream()方法 --- 只有实现了该接口的集合对象才可以使用该方法，如list，set，queue等，map不行*/
+        /**三.Collection接口的stream()方法 --- 只有实现了该接口的集合对象才可以使用该方法，如list，set，queue等，map不行*/
         /*.1*/
         List<String> list1 = new ArrayList<>();
         list.add("asc");
@@ -76,5 +76,14 @@ public class StreamTest {
         list1.stream();
 
 
+        /**四.Stream的generate和iterate方法生成无限流(如果不指定生成的大小，则会无限创建)
+
+         --->>>  之前的三种方法生成的都是有限流，流的大小是确定的(由数组或集合的大小确定) */
+
+        /*.1 >>> 无限流，里面放的是无限个生成的对象，无限流需要与limit对象一起用来指定生成多少个(流的大小)*/
+        Stream.generate(UUID.randomUUID()::toString).limit(3).forEach(System.out::println);
+
+        /*.2 >>> 无限流，里面放的是无限个从1开始的奇数，无限流需要与limit对象一起用来指定生成多少个(流的大小)*/
+        Stream.iterate(1, i -> i += 2).limit(7).forEach(System.out::println);
     }
 }
