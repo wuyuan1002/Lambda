@@ -18,12 +18,10 @@ public class Demo4 {
         List<String> list = Arrays.asList("hello", "world", "helloworld", "wuyuan");
 
 
-
         /**
          * 把list中的字符串都转换成大写，不放到新的list中，只是输出流中的结果
          */
         list.stream().map(String::toUpperCase).forEach(System.out::println);
-
 
 
         /**
@@ -33,6 +31,28 @@ public class Demo4 {
 
 
 //        Stream.of(list).map(String::toUpperCase); // 这样写不行，map()操作的是list整体，而上一种是操作的list里面的元素
+
+
+
+
+
+
+
+        /**
+         * Lists里面是多个List，多个List中存储的是多个integer对象，使用flatMap方法将每一个List都转换成Stream，
+         * 搞成一个整体的Stream，里面是单个List里面的元素.
+         */
+        List<List<Integer>> lists = Arrays.asList(
+                Arrays.asList(1, 2, 3, 4, 5),
+                Arrays.asList(4, 2, 7, 5, 7, 3),
+                Arrays.asList(8, 1, 9));
+
+
+        List result = lists.stream()
+                .flatMap(anyList -> anyList.stream())
+                .map(integer -> integer * integer)
+                .collect(Collectors.toList());
+        System.out.println(result);
 
     }
 }
