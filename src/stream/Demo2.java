@@ -59,7 +59,7 @@ public class Demo2 {
 
 
 
-        /*.6 -- 默认转换成ArrayList*/
+        /*.6 -- 默认转换成HashSet*/
         Set<String> set1 = Stream.of(strings).collect(Collectors.toSet());
         /*.7 -- 可以转换成自定义的Collection*/
         Set<String> set2 = Stream.of(strings).collect(Collectors.toCollection(() -> new HashSet<>()));
