@@ -79,7 +79,7 @@ public class StreamTest {
 
         /**四.Stream的generate和iterate方法生成无限流(如果不指定生成的大小，则会无限创建)
 
-         --->>>  之前的三种方法生成的都是有限流，流的大小是确定的(由数组或集合的大小确定) */
+                --->>>  之前的三种方法生成的都是有限流，流的大小是确定的(由数组或集合的大小确定) */
 
         /*.1 >>> 无限流，里面放的是无限个生成的对象，无限流需要与limit对象一起用来指定生成多少个(流的大小)*/
         Stream.generate(UUID.randomUUID()::toString).limit(3).forEach(System.out::println);
