@@ -38,6 +38,9 @@ public class Demo4 {
 
 
 
+
+
+
         /**
          * Lists里面是多个List，多个List中存储的是多个integer对象，使用flatMap方法将每一个List都转换成Stream，
          * 搞成一个整体的Stream，里面是单个List里面的元素.
@@ -53,6 +56,20 @@ public class Demo4 {
                 .map(integer -> integer * integer)
                 .collect(Collectors.toList());
         System.out.println(result);
+
+
+
+        /**
+         * 把字符串List里的以空格隔开的单词去重放到一个List里.
+         */
+        List<String> stringList = Arrays.asList("hello world", "hello wuyuan nihao", "wuyuan nihao world");
+        List<String> resultList = stringList.stream()
+                .map(s -> s.split(" "))
+                .flatMap(arr -> Stream.of(arr))
+                .distinct()
+                .collect(Collectors.toList());
+        System.out.println(resultList);
+
 
     }
 }
