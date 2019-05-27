@@ -9,7 +9,7 @@ import java.util.stream.Stream;
  * @author wuyuan
  * @version 1.0
  * @className: Demo4
- * @description 描述:
+ * @description 描述: map() 和 flatMap()
  * @date 2019/5/26
  */
 public class Demo4 {
@@ -29,14 +29,7 @@ public class Demo4 {
          */
         list.stream().map(String::toUpperCase).collect(Collectors.toList()).forEach(System.out::println);
 
-
 //        Stream.of(list).map(String::toUpperCase); // 这样写不行，map()操作的是list整体，而上一种是操作的list里面的元素
-
-
-
-
-
-
 
 
 
@@ -58,7 +51,6 @@ public class Demo4 {
         System.out.println(result);
 
 
-
         /**
          * 把字符串List里的以空格隔开的单词去重放到一个List里.
          */
@@ -69,6 +61,22 @@ public class Demo4 {
                 .distinct()
                 .collect(Collectors.toList());
         System.out.println(resultList);
+
+
+        /**
+         * 将每一个打招呼语用在每个人上
+         */
+        List<String> list1 = Arrays.asList("hi", "hello", "nihao");
+        List<String> list2 = Arrays.asList("zhangsan", "lisi", "wangwu", "zhaoliu");
+
+        List<String> hello = list1.stream()
+                .flatMap(item -> list2.stream().map(item2 -> item + " " + item2))
+                .collect(Collectors.toList());
+        System.out.println(hello);
+
+        //用map不行
+//        list1.stream().map(item->list2.stream().map(item2->item+" "+item2).collect(Collectors.toList())).forEach(System.out::println);
+
 
 
     }
