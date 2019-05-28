@@ -57,7 +57,7 @@ public class Demo2 {
         List<String> list5 = Stream.of(strings).collect(ArrayList::new, ArrayList::add, ArrayList::addAll);
 
         /*.6*/
-        List<String> list6 = Stream.of(strings).collect(Collector.of(ArrayList::new, ArrayList::add, (l1, l2) -> {l1.addAll(l2);return l1;}));
+        List<String> list6 = Stream.of(strings).collect(Collector.of(ArrayList::new, ArrayList::add, (l1, l2) -> {l1.addAll(l2); return l1; }));
 
 
 
