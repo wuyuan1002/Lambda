@@ -8,6 +8,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 import java.util.UUID;
+import java.util.stream.Collector;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
@@ -49,11 +50,18 @@ public class Demo2 {
         List<String> list3 = Stream.of(strings).collect(Collectors.toCollection(LinkedList::new));
 
         /*.4*/
-        List<String> list4 = Stream.of(strings).collect(() -> new ArrayList<String>(),
+        List<String> list4 = Stream.of(strings).collect(() -> new ArrayList<>(),
                 (thelist, item) -> thelist.add(item), (l1, l2) -> l1.addAll(l2));
 
         /*.5*/
         List<String> list5 = Stream.of(strings).collect(ArrayList::new, ArrayList::add, ArrayList::addAll);
+
+        /*.6*/
+        List<String> list6 = Stream.of(strings).collect(Collector.of(ArrayList::new, ArrayList::add, (l1, l2) -> {l1.addAll(l2);return l1;}));
+
+
+
+
 
 
 
@@ -73,6 +81,9 @@ public class Demo2 {
 
         /*.10*/
         Set<String> set5 = Stream.of(strings).collect(HashSet::new, HashSet::add, HashSet::addAll);
+
+
+
 
 
 
