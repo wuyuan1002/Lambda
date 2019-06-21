@@ -1,6 +1,5 @@
 package stream;
 
-import java.util.ArrayList;
 import java.util.stream.Stream;
 
 /**
@@ -12,9 +11,9 @@ import java.util.stream.Stream;
  */
 public class Demo1 {
     public static void main(String[] args) {
-
+        
         Integer[] ins = new Integer[]{1, 2, 3, 4, 5, 6, 7, 8, 9};
-
+        
         /*
          * 输出把小于5的数字乘以2再相加的和
          */
@@ -23,7 +22,7 @@ public class Demo1 {
                 .map(j -> j * 2)
                 .reduce(Integer::sum)
                 .ifPresent(System.out::println);
-
-
+        
+        
     }
 }

@@ -44,7 +44,7 @@ public class Demo4 {
                 Arrays.asList(8, 1, 9));
 
 
-        List result = lists.stream()
+        List<Integer> result = lists.stream()
                 .flatMap(anyList -> anyList.stream())
                 .map(integer -> integer * integer)
                 .collect(Collectors.toList());
