@@ -49,13 +49,13 @@ public class StreamTest {
         list.add("asc");
         list.add("svd");
         list.add("jdb");
-        Stream.of(list);
+        Stream.of(list);//流中元素是整个list集合对象，而不是list中的每个元素。
 
         /*.4*/
         Map<String, String> as = new HashMap<>();
         as.put("ws", "as");
         as.put("as", "s");
-        Stream.of(as);
+        Stream.of(as);//流中元素是整个map集合对象，而不是map中的每个元素。
 
 
         /**二.Arrays.stream()方法，传入一个数组*/
@@ -74,7 +74,7 @@ public class StreamTest {
         list1.add("asc");
         list1.add("svd");
         list1.add("jdb");
-        list1.stream();
+        list1.stream();//流中元素是list中的每个元素，而不是整个list集合对象。
 
 
         /**四.Stream的generate和iterate方法生成无限流(如果不指定生成的大小，则会无限创建)
