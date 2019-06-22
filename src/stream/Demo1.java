@@ -5,8 +5,6 @@ import java.util.stream.Stream;
 /**
  * @author wuyuan
  * @version 1.0
- * @className: Demo1
- * @description 描述:
  * @date 2019/5/26
  */
 public class Demo1 {

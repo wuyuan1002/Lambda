@@ -6,10 +6,10 @@ import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 /**
+ * map() 和 flatMap()练习
+ *
  * @author wuyuan
  * @version 1.0
- * @className: Demo4
- * @description 描述: map() 和 flatMap()
  * @date 2019/5/26
  */
 public class Demo4 {

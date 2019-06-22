@@ -13,10 +13,10 @@ import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 /**
+ * toArray和collect的使用  >>>  练习流与数组，list，map，set等的相互转换
+ *
  * @author wuyuan
  * @version 1.0
- * @className: Demo2
- * @description 描述: toArray和collect的使用  >>>  练习流与数组，list，map，set等的相互转换
  * @date 2019/5/26
  */
 public class Demo2 {

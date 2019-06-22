@@ -7,10 +7,10 @@ import java.util.Set;
 import java.util.stream.Collectors;
 
 /**
+ * 分组和分组 -->> 分组就是SQL的 group by ，分区是分组的特殊情况，分区是分为两组，一组是true组，一组是false组。
+ *
  * @author wuyuan
  * @version 1.0
- * @className: Demo6
- * @description 描述: 分组和分组 -->> 分组就是SQL的 group by ，分区是分组的特殊情况，分区是分为两组，一组是true组，一组是false组。
  * @date 2019/5/27
  */
 public class Demo6 {
