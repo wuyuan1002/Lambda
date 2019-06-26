@@ -3,11 +3,11 @@ package optional;
 import java.util.Optional;
 
 /**
+ * optional是一个容器类，里面有一个属性value用来存储一个可能为空也可能不为空的对象，
+ * 作用是用来规避空指针异常的。该类没有公有的构造方法，里面的方法都是静态的。
+ *
  * @author wuyuan
  * @version 1.0
- * @className: OptionalTest
- * @description 描述:  optional是一个容器类，里面有一个属性value用来存储一个可能为空也可能不为空的对象，
- *                     作用是用来规避空指针异常的。该类没有公有的构造方法，里面的方法都是静态的。
  * @date 2019/5/25
  */
 public class OptionalTest {
