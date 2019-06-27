@@ -68,7 +68,7 @@ public class StreamTest {
         Arrays.stream(cc);
         
         
-        /**三.Collection接口的stream()方法 --- 只有实现了该接口的集合对象才可以使用该方法，如list，set，queue等，map不行*/
+        /**三.Collection接口的stream()方法 --- 只有实现了Collection接口的集合的对象才能用，如 list，set，queue等，map不行*/
         /*.1*/
         List<String> list1 = new ArrayList<>();
         list1.add("asc");
