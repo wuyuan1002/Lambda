@@ -38,11 +38,11 @@ public class StreamTest {
         
         /**一.Stream.of()静态方法，传入一个(list,map,数组)或多个数据*/
         /*.1*/
-        Stream.of("hello", "world", "hello world");
+        Stream.of("hello", "world", "hello world");//流中元素是每个字符串对象。
         
         /*.2*/
         int[] aa = new int[]{1, 2, 3};
-        Stream.of(aa);
+        Stream.of(aa);//流中元素是整个数组对象，而不是数组中的每个元素。
         
         /*.3*/
         List<String> list = new ArrayList<>();
@@ -61,11 +61,11 @@ public class StreamTest {
         /**二.Arrays.stream()方法，传入一个数组*/
         /*.1*/
         int[] bb = new int[]{1, 2, 3};
-        Arrays.stream(bb);
+        Arrays.stream(bb);//流中元素是舒徐中的每个元素，而不是整个数组对象。
         
         /*.2*/
         Integer[] cc = new Integer[]{1, 2};
-        Arrays.stream(cc);
+        Arrays.stream(cc);//流中元素是舒徐中的每个元素，而不是整个数组对象。
         
         
         /**三.Collection接口的stream()方法 --- 只有实现了Collection接口的集合的对象才能用，如 list，set，queue等，map不行*/
