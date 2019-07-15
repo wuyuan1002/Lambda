@@ -17,7 +17,7 @@ public class ComparatorTest {
     public static void main(String[] args) {
         List<String> list = Arrays.asList("zhangsan", "liis", "wangwu", "wuyuan", "wangyi");
         list.sort(Comparator.comparing(String::length));
-        list.stream().sorted((item1,item2)->item2.length() - item1.length()).collect(Collectors.toList());
+        list.stream().sorted((item1, item2) -> item2.length() - item1.length()).collect(Collectors.toList());
         Collections.sort(list, Comparator.comparingInt(o -> o.charAt(0)));
     }
 }
