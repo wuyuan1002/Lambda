@@ -61,11 +61,11 @@ public class StreamTest {
         /**二.Arrays.stream()方法，传入一个数组*/
         /*.1*/
         int[] bb = new int[]{1, 2, 3};
-        Arrays.stream(bb);//流中元素是舒徐中的每个元素，而不是整个数组对象。
+        Arrays.stream(bb);//流中元素是数组中的每个元素，而不是整个数组对象。
         
         /*.2*/
         Integer[] cc = new Integer[]{1, 2};
-        Arrays.stream(cc);//流中元素是舒徐中的每个元素，而不是整个数组对象。
+        Arrays.stream(cc);//流中元素是数组中的每个元素，而不是整个数组对象。
         
         
         /**三.Collection接口的stream()方法 --- 只有实现了Collection接口的集合的对象才能用，如 list，set，queue等，map不行*/
