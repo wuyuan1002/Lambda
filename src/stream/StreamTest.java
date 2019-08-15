@@ -43,15 +43,19 @@ public class StreamTest {
         /*.2*/
         int[] aa = new int[]{1, 2, 3};
         Stream.of(aa);//流中元素是整个数组对象，而不是数组中的每个元素。
-        
+    
         /*.3*/
+        Integer[] ins = new Integer[]{1, 2, 3, 4, 5, 6, 7, 8, 9};
+        Stream.of(ins);//流中元素是数组中的每一个元素，不是整个数组对象。
+        
+        /*.4*/
         List<String> list = new ArrayList<>();
         list.add("asc");
         list.add("svd");
         list.add("jdb");
         Stream.of(list);//流中元素是整个list集合对象，而不是list中的每个元素。
         
-        /*.4*/
+        /*.5*/
         Map<String, String> as = new HashMap<>();
         as.put("ws", "as");
         as.put("as", "s");
