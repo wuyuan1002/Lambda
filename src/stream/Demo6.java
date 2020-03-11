@@ -47,7 +47,7 @@ public class Demo6 {
 
 
         /*
-         * 先按照成绩分组，如果姓名相同，则按照成绩分组，组中成员改成学生姓名放在set中
+         * 先按照姓名分组，如果姓名相同，则按照成绩分组，组中成员改成学生姓名放在set中
          */
         Map<String, Map<Integer, Set<String>>> map5 = students.stream().collect(Collectors.groupingBy(Student::getName, Collectors.groupingBy(Student::getScore, Collectors.mapping(Student::getName, Collectors.toSet()))));
 
